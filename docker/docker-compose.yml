@@ -1,0 +1,16 @@
+version: '2.1'
+services:
+  cassandra:
+    image: "datastax/dse-server"
+    container_name: cassandra_docker
+    environment:
+      - DS_LICENSE=accept
+    ports:
+      - "9043:9042"
+    volumes:
+      - ../docker/schema.cql:/opt/dse/schema.cql
+
+
+
+
+
