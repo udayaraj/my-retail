@@ -65,7 +65,7 @@ class ProductapiApplicationSpecification extends Specification {
 
     }
 
-    def 'Get call should return Product not found  - data not present'() {
+    def 'Get call should return Invalid product id  - data not present'() {
         given:
         def productRepository = getTargetObject(productRepository)
 
@@ -80,7 +80,7 @@ class ProductapiApplicationSpecification extends Specification {
 
     }
 
-    def 'Put call should not update product  and return return Product not found - data not present'() {
+    def 'Put call should not update product  and return return Invalid product - data not present'() {
         given:
         def productRepository = getTargetObject(productRepository)
         HttpEntity<CurrentPrice> request = new HttpEntity<>(currentPrice);
